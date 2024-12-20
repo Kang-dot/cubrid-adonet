@@ -1,13 +1,13 @@
 set FILE_NAME=CUBRID ADO.NET Data Provider 11.2.0.0002
 
 cd ..\..\Code\Src
-call "%VS140COMNTOOLS%vsvars32.bat"
+call "%VS2017COMNTOOLS%VsDevCmd.bat"
 devenv CUBRID.Data.CUBRIDClient.csproj /rebuild "Release|Any CPU" 
 cd ..\..\Installer\nsis
 rd /s/q Build
 md Build
 
-C:\NSIS\makensis CUBRID.nsi
+makensis CUBRID.nsi
 
 copy "%FILE_NAME%.exe" Build\
 del /q "%FILE_NAME%.exe"

@@ -1,4 +1,4 @@
-call "%VS110COMNTOOLS%vsvars32.bat"
+call "%VS2017COMNTOOLS%VsDevCmd.bat"
 cd Code\Test\QATest\ADOTest
 devenv ADOTest.csproj /rebuild "Release|Any CPU" 
 cd bin\Release
