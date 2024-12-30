@@ -26,7 +26,10 @@ if EXIST "%SCRIPT_DIR%\cubrid-cci" rmdir /s /q cubrid-cci
 
 git clone git@github.com:CUBRID/cubrid-cci.git
 
-if "%VS2017COMNTOOLS%x" == "x" echo "Please add 'VS2017COMNTOOLS' in the environment variable\n ex) C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools
+if "%VS2017COMNTOOLS%x" == "x" (
+ echo "Please add 'VS2017COMNTOOLS' in the environment variable\n ex) C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools"
+ GOTO :EOF
+)
 
 cd %CCI_WIN_DIR%
 
